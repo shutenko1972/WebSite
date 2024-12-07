@@ -1,352 +1,121 @@
-:root {
-    --heading-color: #64b5f6; /* Цвет заголовков */
-    --accent-color: #4db6ac; /* Акцентный цвет */
-    --gradient-border: 5px solid #81d4fa; /* Градиентная граница */
-    --black-color: #000000; /* Черный цвет для заголовков секций и имени */
-}
-
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif; /* Шрифт для всего документа */
-    margin: 0; /* Убираем внешние отступы */
-    padding: 0; /* Убираем внутренние отступы */
-    background-color: #f4f4f4; /* Цвет фона страницы */
-    color: #333; /* Цвет текста */
-    min-height: 100vh; /* Минимальная высота страницы */
-    display: flex; /* Используем flexbox для разметки */
-    flex-direction: column; /* Располагаем элементы в столбец */
-    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 main {
-    flex: 1; /* Занимаем всю доступную высоту */
-    padding: 20px; /* Внутренние отступы */
-    padding-bottom: 60px; /* Добавляем отступ снизу для футера */
-    background-color: #e0e0e0; /* Светло-серый фон для main */
-    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-footer {
-    text-align: center; /* Выравнивание текста по центру */
-    padding: 10px; /* Внутренние отступы */
-    background-color: var(--accent-color); /* Фон футера */
-    color: white; /* Цвет текста */
-    position: relative; /* Меняем fixed на relative */
-    width: 100%; /* Ширина футера */
-}
-
-header {
-    background-image: url('images/testing.png'); /* Фоновая картинка */
-    background-size: cover; /* Масштабируем картинку, чтобы она покрывала весь заголовок */
-    background-position: center; /* Центрируем картинку */
-    color: white; /* Цвет текста */
-    padding: 20px; /* Внутренние отступы */
-    text-align: center; /* Выравнивание текста по центру */
-    border-bottom: var(--gradient-border); /* Градиентная граница снизу */
-    display: flex; /* Используем flexbox для разметки */
-    align-items: center; /* Выравнивание элементов по вертикали */
-    justify-content: space-between; /* Распределяем элементы по горизонтали */
-    min-height: 200px; /* Минимальная высота заголовка */
-    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
-    position: relative; /* Добавляем позиционирование */
-}
-
-h1, h2 {
-    margin: 0; /* Убираем внешние отступы */
-    padding: 10px 0; /* Внутренние отступы */
-    color: var(--black-color); /* Цвет заголовков */
-    margin-bottom: 20px; /* Отступ снизу для h2 */
-}
-
-p.job-title,
-p.contact-info,
-a.contact-link {
-    color: var(--black-color); /* Цвет текста для контактной информации */
-}
-
-a {
-    color: var(--heading-color); /* Цвет ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
-}
-
-a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
-
-section {
-    background-color: white; /* Фон секций */
-    margin-bottom: 20px; /* Отступ снизу */
-    padding: 20px; /* Внутренние отступы */
-    border-radius: 5px; /* Скругление углов */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
-    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
-}
-
-ul {
-    list-style: none; /* Убираем маркеры списка */
-    padding: 0; /* Убираем внутренние отступы */
-}
-
-ul li {
-    margin-bottom: 10px; /* Отступ снизу для элементов списка */
-}
-
-nav {
-    background-color: #333; /* Фон навигации */
-    padding: 10px 0; /* Внутренние отступы */
-    text-align: center; /* Выравнивание текста по центру */
-    position: absolute; /* Абсолютное позиционирование */
-    bottom: 0; /* Прижимаем к низу */
-    width: 100%; /* Ширина на всю страницу */
-}
-
-nav ul {
-    list-style: none; /* Убираем маркеры списка */
-    padding: 0; /* Убираем внутренние отступы */
-    margin: 0; /* Убираем внешние отступы */
-    display: flex; /* Используем flexbox для разметки */
-    justify-content: center; /* Выравнивание элементов по центру */
-}
-
-nav ul li {
-    margin: 0 10px; /* Отступы между элементами списка */
-}
-
-nav ul li a {
-    color: white; /* Цвет текста ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
-    font-weight: bold; /* Жирный шрифт */
-    padding: 10px 20px; /* Внутренние отступы */
-    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
-}
-
-nav ul li a:hover {
-    background-color: var(--accent-color); /* Фон при наведении */
-    color: white; /* Цвет текста при наведении */
-    border-radius: 5px; /* Скругление углов при наведении */
-}
-
-#profile-photo {
-    text-align: right; /* Выравнивание текста по правому краю */
-    margin: 20px 0; /* Отступы сверху и снизу */
-}
-
-.thumbnail {
-    width: 100%; /* Ширина изображения на маленьких экранах */
-    max-width: 200px; /* Максимальная ширина изображения */
-    height: auto; /* Автоматическая высота */
-    border-radius: 10px; /* Скругление углов */
-    transition: transform 0.3s; /* Плавный переход */
-}
-
-.thumbnail:hover {
-    transform: scale(1.1); /* Увеличение изображения при наведении */
-}
-
-#profile-photo a {
-    text-decoration: none; /* Убираем подчеркивание */
-}
-
-.projects-list {
-    list-style: none; /* Убираем маркеры списка */
-    padding: 0; /* Убираем внутренние отступы */
-    margin: 0; /* Убираем внешние отступы */
-    display: flex; /* Используем flexbox для разметки */
-    justify-content: space-around; /* Распределяем элементы по горизонтали */
-}
-
-.projects-list li {
-    margin: 0 10px; /* Отступы между элементами списка */
-}
-
-.projects-list a {
-    color: var(--heading-color); /* Цвет ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
-    font-weight: bold; /* Жирный шрифт */
-    transition: color 0.3s; /* Плавный переход */
-}
-
-.projects-list a:hover {
-    color: #333; /* Цвет текста при наведении */
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
-
-header p a {
-    color: white; /* Цвет текста ссылок */
-    text-decoration: underline; /* Подчеркивание */
-}
-
-header p a:hover {
-    color: #ccc; /* Цвет текста при наведении */
-}
-
-.scroll-to-top, .scroll-to-bottom {
-    position: fixed; /* Фиксированное положение */
-    right: 20px; /* Отступ справа */
-    background-color: var(--accent-color); /* Фон */
-    color: white; /* Цвет текста */
-    text-align: center; /* Выравнивание текста по центру */
-    padding: 10px; /* Внутренние отступы */
-    border-radius: 5px; /* Скругление углов */
-    text-decoration: none; /* Убираем подчеркивание */
-    font-size: 24px; /* Размер шрифта */
-    z-index: 1000; /* Значение z-index */
-    transition: background-color 0.3s; /* Плавный переход */
-}
-
-.scroll-to-top:hover, .scroll-to-bottom:hover {
-    background-color: #333; /* Фон при наведении */
-}
-
-.scroll-to-top {
-    bottom: 70px; /* Отступ снизу */
-}
-
-.scroll-to-bottom {
-    bottom: 20px; /* Отступ снизу */
-}
-
-/* Стиль для жирного шрифта */
-.bold {
-    font-weight: bold; /* Жирный шрифт */
-}
-
-/* Новые стили для сетки */
-.grid-container {
-    display: grid; /* Используем grid для разметки */
-    grid-template-columns: repeat(2, 1fr); /* Две колонки равной ширины */
-    gap: 20px; /* Отступы между элементами */
-}
-
-.grid-item {
-    background-color: white; /* Фон элементов */
-    padding: 20px; /* Внутренние отступы */
-    border-radius: 5px; /* Скругление углов */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
-}
-
-/* Стили для динамических секций */
 .sections-grid {
-    display: grid; /* Используем grid для разметки */
-    grid-template-columns: repeat(2, 1fr); /* Две колонки равной ширины */
-    gap: 20px; /* Отступы между элементами */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section-item {
-    background-color: white; /* Фон внутри секций */
-    padding: 20px; /* Внутренние отступы */
-    border: 1px solid #ddd; /* Граница */
-    border-radius: 5px; /* Скругление углов */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
-}
-
-.section-item h2 {
-    margin-bottom: 10px; /* Отступ снизу для заголовков */
-    color: var(--black-color); /* Цвет заголовков */
-}
-
-.section-item p {
-    margin-top: 0; /* Убираем верхний отступ для параграфов */
-    margin-bottom: 15px; /* Отступ снизу для параграфов */
-    line-height: 1; /* Интервал между строками в параграфе */ 
-}
-
-/* Дополнительные стили для улучшения читаемости */
-.section-item ul {
-    margin: 0; /* Убираем внешние отступы */
-    padding-left: 20px; /* Внутренний отступ слева */
-}
-
-.section-item ul li {
-    margin-bottom: 10px; /* Отступ снизу для элементов списка */
-}
-
-.section-item ul li::before {
-    content: "— "; /* Добавляем маркер перед элементами списка */
-    color: var(--accent-color); /* Цвет маркера */
-}
-
-/* Стили для новых секций */
-.top-section {
-    display: flex; /* Используем flexbox для разметки */
-    align-items: center; /* Выравнивание элементов по вертикали */
-    justify-content: space-between; /* Распределяем элементы по горизонтали */
-    padding: 20px; /* Внутренние отступы */
-    background-color: white; /* Фон секций */
-    border-radius: 5px; /* Скругление углов */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
-    margin-bottom: 20px; /* Отступ снизу */
-    overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
-}
-
-.top-section img {
-    width: 100%; /* Ширина изображения на маленьких экранах */
-    max-width: 200px; /* Максимальная ширина изображения */
-    height: auto; /* Автоматическая высота */
-    border-radius: 10px; /* Скругление углов */
-    margin-right: 20px; /* Отступ справа */
-}
-
-.top-section .text-content {
-    flex: 1; /* Занимаем всю доступную ширину */
-}
-
-.top-section h1 {
-    color: var(--black-color); /* Цвет заголовков */
-    margin-bottom: 10px; /* Отступ снизу */
-}
-
-.top-section p {
-    color: var(--black-color); /* Цвет текста */
-    margin-bottom: 10px; /* Отступ снизу */
-}
-
-.top-section a {
-    color: var(--heading-color); /* Цвет ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
-}
-
-.top-section a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
-
-/* Применяем стиль для уменьшения расстояния между параграфами */
-p {
-    margin-bottom: 10px; /* Устанавливаем желаемый отступ снизу */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .thumbnail {
-    width: 100%; /* Ширина изображения на маленьких экранах */
-    max-width: 200px; /* Максимальная ширина изображения */
-    height: auto; /* Автоматическая высота */
-    border-radius: 10px; /* Скругление углов */
-    transition: transform 0.3s; /* Плавный переход */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-.thumbnail:hover {
-    transform: scale(1.1); /* Увеличение изображения при наведении */
+.text-content {
+    margin-top: 15px;
 }
 
-/* Медиа-запросы для адаптивности */
+.bold {
+    font-weight: bold;
+}
+
+.contact-info {
+    margin: 10px 0;
+}
+
+.contact-link {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.scroll-to-top, .scroll-to-bottom {
+    display: block;
+    position: fixed;
+    right: 20px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.scroll-to-top {
+    bottom: 80px;
+}
+
+.scroll-to-bottom {
+    bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Адаптивность */
 @media (max-width: 768px) {
     .sections-grid {
-        grid-template-columns: 1fr; /* Одна колонка на маленьких экранах */
+        grid-template-columns: 1fr;
     }
 
-    .top-section {
-        flex-direction: column; /* Располагаем элементы в столбец на маленьких экранах */
-        align-items: flex-start; /* Выравнивание элементов по левому краю */
-    }
-
-    .top-section img {
-        margin-right: 0; /* Убираем отступ справа */
-        margin-bottom: 20px; /* Добавляем отступ снизу */
-    }
-
-    .thumbnail {
-        width: 100%; /* Ширина изображения на маленьких экранах */
+    .top-section, .section-item {
+        padding: 15px;
     }
 
     .scroll-to-top, .scroll-to-bottom {
-        font-size: 18px; /* Уменьшаем размер шрифта на маленьких экранах */
+        right: 10px;
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    .scroll-to-top {
+        bottom: 70px;
+    }
+
+    .scroll-to-bottom {
+        bottom: 10px;
     }
 }
