@@ -139,33 +139,5 @@
         <a name="bottom"></a>
         <p class="bold">Гражданство: Россия. Проживание: Саратовская область, город Красный Кут</p>
     </footer>
-	 <!-- Динамически загружаемые секции -->
-     <!-- <script>
-        async function fetchSections() {
-            try {
-                const response = await fetch('/sections');
-                const result = await response.json();
-                console.log(result); // Вывод результата в консоль для отладки
-                if (result.message === "success" && result.data.length > 0) {
-                    const sectionsContainer = document.getElementById('sectionsContainer');
-                    sectionsContainer.innerHTML = '';
-                    result.data.forEach(section => {
-                        const sectionDiv = document.createElement('section');
-                        sectionDiv.classList.add('section-item'); // Добавляем класс для стилевого оформления
-                        sectionDiv.innerHTML = `
-                            <h2>${section.name}</h2>
-                            <p>${section.content}</p>
-                        `;
-                        sectionsContainer.appendChild(sectionDiv);
-                    });
-                } else {
-                    console.error('No data found');
-                }
-            } catch (error) {
-                console.error('Error fetching sections:', error);
-            }
-        }
-        fetchSections();
-    </script> -->
 </body>
 </html>
